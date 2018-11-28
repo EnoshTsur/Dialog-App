@@ -14,7 +14,7 @@ class PostUserCallback extends Component {
     // Handling keys
     handleKeys = e => {
         if (e.key === 'Escape') {
-            this.props.setShowFalse();
+            this.props.closeDialog();
         }
     }
 
@@ -26,7 +26,7 @@ class PostUserCallback extends Component {
                 </div>
                 <hr />
                 <Center>
-                    <button className="btn btn-info" onClick={this.props.setShowFalse}>Back</button>
+                    <button className="btn btn-info" onClick={this.props.closeDialog}>Back</button>
                 </Center>
             </div>
         )

@@ -33,7 +33,7 @@ class SetUser extends Component {
 
         switch (e.key) {
             case 'Escape':
-                this.props.setShowFalse()
+                this.props.closeDialog()
                 break;
 
             case 'Tab':
@@ -71,7 +71,7 @@ class SetUser extends Component {
         }
 
         this.props.setUser(user);
-        this.props.setShowFalse();
+        this.props.closeDialog();
     }
 
     handleNoPath = () => this.setState({ imgPath: DefaultImage })
@@ -120,7 +120,7 @@ class SetUser extends Component {
                     <br />
                     <div className={classes.Buttons}>
                         {button}
-                        <button className="btn btn-danger" onClick={this.props.setShowFalse}>Cancel</button>
+                        <button className="btn btn-danger" onClick={this.props.closeDialog}>Cancel</button>
                     </div>
                 </Center>
 

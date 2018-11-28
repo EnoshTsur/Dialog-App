@@ -13,7 +13,7 @@ class AllUsers extends Component {
     // Handling keys
     handleKeys = e => {
         if (e.key === 'Escape') {
-            this.props.setShowFalse();
+            this.props.closeDialog();
         }
     }
 
@@ -39,7 +39,7 @@ class AllUsers extends Component {
                 </div>
 
                 <Center>
-                    <button className="btn btn-danger" onClick={this.props.setShowFalse}>Close</button>
+                    <button className="btn btn-danger" onClick={this.props.closeDialog}>Close</button>
                 </Center>
             </div>
         )

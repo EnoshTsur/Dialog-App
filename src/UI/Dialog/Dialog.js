@@ -5,7 +5,7 @@ import Backdrop from '../../UI/Backdrop/Backdrop';
 const Dialog = props => (
     <div>
         <Wrapper>
-            <Backdrop show={props.show} clicked={props.setShowFalse} />
+            <Backdrop show={props.show} clicked={props.closeDialog} />
             {props.children}
         </Wrapper>
     </div>

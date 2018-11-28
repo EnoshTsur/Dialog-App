@@ -45,7 +45,7 @@ class FindUsersContainer extends Component {
     }
 
     // Close dialog / backdrop
-    setShowFalse = () => {
+    closeDialog = () => {
         this.setState({ show: false, ariaHidden: false });
         this.props.setFocus();
     }
@@ -56,12 +56,12 @@ class FindUsersContainer extends Component {
 
         // Dialog Children
         const dialogChildren = (this.state.dialogState === this.state.dialogStates[0]) ?
-            <FindOne setShowFalse={this.setShowFalse} singleUser={this.state.singleUser} /> :
-            <AllUsers setShowFalse={this.setShowFalse} users={this.state.users} />
+            <FindOne closeDialog={this.closeDialog} singleUser={this.state.singleUser} /> :
+            <AllUsers closeDialog={this.closeDialog} users={this.state.users} />
 
         // Dialog
         const dialog = this.state.show ?
-            <Dialog setShowFalse={this.setShowFalse} show={this.state.show}
+            <Dialog closeDialog={this.closeDialog} show={this.state.show}
                 setUser={this.setUser} imgPath={this.state.imgPath}>
                 {dialogChildren}
             </Dialog> : null

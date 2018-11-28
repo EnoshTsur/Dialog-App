@@ -30,13 +30,13 @@ class UserContainer extends Component {
     }
 
     // Set Dialogs visible mode to false
-    setShowFalse = () => {
+    closeDialog = () => {
         this.setState({ show: false, postShow: false, ariaHidden: true });
         this.props.setFocus();
     }
 
     // Set Edit User dialog to be true and aria-hidden modes
-    setShowTrue = () => this.setState({ show: true, ariaHidden: true })
+    openDialog = () => this.setState({ show: true, ariaHidden: true })
 
     // Setting image url
     setUser = user => this.setState({ name: user.name, imgPath: user.imgPath });
@@ -81,15 +81,15 @@ class UserContainer extends Component {
 
         // Fetch Answer Dialog
         const postDialog = this.state.postShow ?
-            <Dialog show={this.state.postShow} setShowFalse={this.setShowFalse}>
-                <PostUserPopup title={this.state.postTitle} setShowFalse={this.setShowFalse} />
+            <Dialog show={this.state.postShow} closeDialog={this.closeDialog}>
+                <PostUserPopup title={this.state.postTitle} closeDialog={this.closeDialog} />
             </Dialog> : null
 
         // Edit User Dialog
         const editDialog = this.state.show ?
-            <Dialog setShowFalse={this.setShowFalse} show={this.state.show}
+            <Dialog setShowFalse={this.closeDialog} show={this.state.show}
                 setUser={this.setUser} imgPath={this.state.imgPath} >
-                <SetUser name={this.state.name} setShowFalse={this.setShowFalse} setUser={this.setUser} />
+                <SetUser name={this.state.name} closeDialog={this.closeDialog} setUser={this.setUser} />
             </Dialog>
             : null;
 
@@ -124,7 +124,7 @@ class UserContainer extends Component {
                 </div>
                 <Center>
                     <div className={classes.OpenDialog} aria-hidden={this.state.ariaHidden}>
-                        <button className="btn btn-primary" onClick={this.setShowTrue}>Edit</button>
+                        <button className="btn btn-primary" onClick={this.openDialog}>Edit</button>
                         {editDialog}
                     </div>
                 </Center>
