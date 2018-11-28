@@ -1,0 +1,16 @@
+.Header {
+    background: linear-gradient(rgb(127, 169, 248), rgb(138, 138, 240));
+    padding: 2%;
+    color: aliceblue;
+    text-shadow: 0 1px 1px white;
+    border-bottom: 2px solid rgb(93, 93, 255);
+}
+
+@media (max-width: 400px) {
+    .Header h1 {
+        font-size: 28px;
+    }
+    .Header {
+        margin-bottom: 5%;
+    }
+}

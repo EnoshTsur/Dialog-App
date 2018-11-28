@@ -1,0 +1,47 @@
+.SetUser {
+    position: absolute;
+    z-index: 500;
+    background-color: white;
+    width: 500px;
+    left: calc(50% - 250px);
+    box-shadow: 1px 1px 1px black;
+    padding: 16px;
+    top: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-out;
+    border-radius: 5px;
+}
+
+.SetUser img {
+    max-width: 15vw;
+}
+
+.Header {
+    text-shadow: 0 1px 1px grey;
+    padding: 2%;
+}
+
+.Buttons button {
+    margin: 2%;
+}
+
+@media (max-width: 600px) {
+    .SetUser {
+        width: 400px;
+        left: calc(50% - 200px);
+    }
+}
+
+@media (max-width: 430px) {
+    .SetUser {
+        width: 300px;
+        left: calc(50% - 150px);
+    }
+}
+
+@media (max-width: 350px) {
+    .SetUser {
+        width: 200px;
+        left: calc(50% - 100px);
+    }
+}

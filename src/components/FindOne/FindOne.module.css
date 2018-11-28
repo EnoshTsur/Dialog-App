@@ -1,0 +1,52 @@
+.FindOne {
+    position: fixed;
+    z-index: 500;
+    background-color: white;
+    width: 500px;
+    left: calc(50% - 250px);
+    box-shadow: 1px 1px 1px black;
+    padding: 16px;
+    top: 20%;
+    box-sizing: border-box;
+    transition: all 0.3s ease-out;
+    border-radius: 5px;
+}
+
+.FindOne h3 {
+    padding: 2%;
+    text-shadow: 0 1px 1px grey;
+}
+
+.FindOne img {
+    max-width: 15vw;
+}
+
+@media (max-width: 850px) {
+    .FindOne img {
+        max-width: 20vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .FindOne {
+        width: 400px;
+        left: calc(50% - 200px);
+    }
+    .FindOne img {
+        max-width: 25vw;
+    }
+}
+
+@media (max-width: 430px) {
+    .FindOne {
+        width: 300px;
+        left: calc(50% - 150px);
+    }
+}
+
+@media (max-width: 350px) {
+    .FindOne {
+        width: 200px;
+        left: calc(50% - 100px);
+    }
+}
