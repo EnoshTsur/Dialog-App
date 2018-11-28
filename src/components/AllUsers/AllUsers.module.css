@@ -10,6 +10,8 @@
     box-sizing: border-box;
     transition: all 0.3s ease-out;
     border-radius: 5px;
+    overflow: auto;
+    max-height: 90vh;
 }
 
 .Avatar {
@@ -17,7 +19,8 @@
     border-radius: 8px;
     padding: 2%;
     margin: 2%;
-    min-width: 17vw;
+    min-width: 15vw;
+    max-width: 15vw;
     background: linear-gradient(lightblue, skyblue);
     text-align: center;
 }
